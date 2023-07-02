@@ -1,0 +1,143 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  --darkCyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --veryDarkBlue: hsl(212, 21%, 14%);
+  --darkGrayishBlue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: var(--cream);
+}
+
+.container {
+  width: 375px;
+  margin: 10% auto 5%;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: var(--white);
+}
+
+.card-description {
+  padding: 20px 25px;
+}
+
+.card-description h2 {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.9em;
+  font-weight: 100;
+  margin-bottom: 1em;
+}
+
+.card-description h1 {
+  font-size: 2.5em;
+  font-family: "Fraunces", sans-serif;
+  margin-bottom: 0.5em;
+  line-height: 35px;
+}
+
+.card-description .desc {
+  font-weight: 100;
+  font-size: 1.1em;
+  line-height: 25px;
+  margin-bottom: 1.3em;
+}
+
+.card-description .price {
+  font-size: 2.3em;
+  font-family: "Fraunces", sans-serif;
+  color: var(--darkCyan);
+  display: flex;
+  align-items: center;
+}
+
+.card-description .discount {
+  margin-left: 1.3em;
+  text-decoration: line-through;
+}
+
+.card-description button {
+  background-color: var(--darkCyan);
+  color: var(--white);
+  width: 100%;
+  padding: 15px 0;
+  border: 0 solid;
+  border-radius: 7px;
+  font-size: 1.1em;
+  margin: 1em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-description img {
+  margin-right: 1em;
+}
+
+.img {
+  width: 100%;
+  height: 265px;
+  background-image: url(images/image-product-mobile.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.attribution {
+  margin-bottom: 5%;
+}
+
+/* Responsive Breakpoint */
+@media screen and (min-width: 500px) {
+  .container {
+    width: 48rem;
+    margin: 5% auto 2%;
+  }
+
+  .card {
+    display: flex;
+  }
+
+  .card-description {
+    padding: 2.5em;
+  }
+
+  .card-description h2 {
+    font-size: 1em;
+    margin-bottom: 1.5em;
+  }
+
+  .card-description h1 {
+    font-size: 2.8em;
+    line-height: 1em;
+    margin-bottom: 0.7em;
+  }
+
+  .card-description button {
+    margin: 2rem 0 0;
+    cursor: pointer;
+  }
+
+  .card-description button:hover {
+    background-color: var(--veryDarkBlue);
+  }
+
+  .img {
+    width: 150%;
+    height: inherit;
+    background-size: cover;
+    background-image: url(images/image-product-desktop.jpg);
+    background-position: center;
+  }
+}
